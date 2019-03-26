@@ -42,9 +42,19 @@
 			//capture response
 			var iScreamInc = request.response;
 			console.log(iScreamInc);
+			//populate the header
+			populateHeader(iScreamInc);
 		}
 
 		/* STEP 9: Build out the populateHeader() function */
+		function populateHeader(jsonObj){
+			//create an h1
+			var header1 = document.createElement('h1');
+			//set the text
+			header1.textContent = jsonObj['companyName'];
+			//attach the new h1 to the header
+			header.appendChild(header1);
+		}
 
 		/* STEP 10a: Assemble the showTopFlavors() function */
 
